@@ -12,8 +12,8 @@ import edu.wpi.first.wpilibj.shuffleboard.BuiltInLayouts;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardLayout;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
-import frc.robot.utils.Enums.ModulePosition;
 import frc.robot.constants.ModuleConstants;
+import frc.robot.subsystems.SwerveDrive;
 //import frc.robot.subsystems.DriveSubsystem;
 import frc.robot.subsystems.SwerveModule;
 
@@ -107,14 +107,16 @@ public class ShuffleboardContent {
                 coderLayout.addNumber("Firmware#" + abrev, () -> sm.m_turnCANcoder.getFirmwareVersion());
         }
 
-        /*
-        public static void initMisc(DriveSubsystem drive) {
-                ShuffleboardTab drLayout1 = Shuffleboard.getTab("Drivetrain");
+        public static void initGyro(SwerveDrive sd) {
+                ShuffleboardTab drLayout1 = Shuffleboard.getTab("Gyro");
 
-                drLayout1.addBoolean("FieldOr", () -> drive.m_fieldRelative).withPosition(8, 4)
+                drLayout1.addNumber("Gyroscope Angle", () -> sd.getAngle()).withPosition(7, 4)
                                 .withSize(1, 1);
-                drLayout1.addNumber("GyroYaw", () -> drive.getHeading()).withPosition(9, 4)
+                drLayout1.addNumber("Yaw", () -> sd.getYaw()).withPosition(8, 4)
+                                .withSize(1, 1);
+                drLayout1.addNumber("Roll", () -> sd.getRoll()).withPosition(9, 4)
+                                .withSize(1, 1);
+                drLayout1.addNumber("Pitch", () -> sd.getPitch()).withPosition(9, 4)
                                 .withSize(1, 1);
         }
-        */
 }
