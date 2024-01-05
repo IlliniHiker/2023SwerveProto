@@ -4,7 +4,7 @@ public final class Enums {
     public enum ModulePosition {
         FRONT_LEFT,
         FRONT_RIGHT,
-        BACK_LEFT,
-        BACK_RIGHT
+        REAR_LEFT,
+        REAR_RIGHT
       }
 }
