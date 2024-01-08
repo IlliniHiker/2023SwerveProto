@@ -1,5 +1,7 @@
 package frc.robot.constants;
 
+import edu.wpi.first.math.util.Units;
+
 public final class DriveConstants {
     public static final boolean kFrontLeftTurningMotorReversed = true;
     public static final boolean kFrontRightTurningMotorReversed = true;
@@ -33,4 +35,19 @@ public final class DriveConstants {
     public static final int kFrontRightTurnEncoderCanId = 51;
     public static final int kRearLeftTurnEncoderCanId = 53;
     public static final int kRearRightTurnEncoderCanId = 52;
+
+    // Driving Parameters - Note that these are not the maximum capable speeds of
+    // the robot, rather the allowed maximum speeds
+    public static final double kMaxSpeedMetersPerSecond = 4.8;
+    public static final double kMaxRotationRadiansPerSecond = Math.PI;
+
+
+    // Chassis configuration
+    public static final double kRobotWidth = Units.inchesToMeters(23.25);  // Distance between centers of right and left wheels on robot
+    public static final double kRobotLength = Units.inchesToMeters(19.25); // Distance between front and back wheels on robot
+
+    // Drive Control
+    public static final boolean kFieldRelative = true;
+    public static final double kTranslationSlew = 1.55;
+    public static final double kRotationSlew = 3.00;
 }

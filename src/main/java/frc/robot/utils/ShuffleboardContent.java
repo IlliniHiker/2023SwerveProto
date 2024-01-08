@@ -110,7 +110,7 @@ public class ShuffleboardContent {
         public static void initGyro(SwerveDrive sd) {
                 ShuffleboardTab drLayout1 = Shuffleboard.getTab("Gyro");
 
-                drLayout1.addNumber("Gyroscope Angle", () -> sd.getAngle()).withPosition(7, 4)
+                drLayout1.addNumber("Gyroscope Angle", () -> sd.getYaw()).withPosition(7, 4)
                                 .withSize(1, 1);
                 drLayout1.addNumber("Yaw", () -> sd.getYaw()).withPosition(8, 4)
                                 .withSize(1, 1);
